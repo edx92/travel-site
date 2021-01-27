@@ -14,15 +14,27 @@
     
     &__title{
         font-weight: 300;
-        color: #2f5572;
+        color: $mainBlue;
         font-size: 4.2rem;
+        margin: 0;
         
     }
     
     &__subtitle {
         font-weight: 300;
-        color: #2f5572;
+        color: $mainBlue;
         font-size: 2.9rem;
+        margin: 0;
+    }
+
+    &__description {
+        color: #ffffff;
+        font-weight: 100;
+        font-size: 1.875rem;
+        text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
