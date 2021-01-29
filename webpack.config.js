@@ -26,7 +26,7 @@ module.exports = {
         host: '0.0.0.0'
     },
     mode: 'development',
-    // Below required if not using webpack-dev-server
+    // Below watch value required if not using webpack-dev-server
     // watch: true,
     module: {
         rules: [
