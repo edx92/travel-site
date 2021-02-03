@@ -1,4 +1,5 @@
 import '../styles/styles.css';
+import 'lazysizes';
 import MobileMenu from './modules/MobileMenu.js';
 import RevealOnScroll from './modules/revealOnScroll';
 import StickyHeader from './modules/StickyHeader';
@@ -10,8 +11,9 @@ let stickyHeader = new StickyHeader();
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75);
 new RevealOnScroll(document.querySelectorAll('.testimonial'), 60);
 
-let modal;
 
+// adding modal functionality on the fly rather than on load
+let modal;
 document.querySelectorAll('.open-modal').forEach(el => {
     el.addEventListener('click', e => {
         e.preventDefault();
@@ -26,6 +28,8 @@ document.querySelectorAll('.open-modal').forEach(el => {
     });
 });
 
+
+// allow hot modules to load css and javascript on save without traditional reload.
 if (module.hot) {
     module.hot.accept();
 }
