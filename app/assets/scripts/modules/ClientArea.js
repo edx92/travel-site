@@ -21,13 +21,11 @@ class ClientArea {
 
     //methods
     sendRequest() {
-        Axios.post('https://gracious-cray-74c49b.netlify.app/.netlify/functions/secret-area', { password: this.field.value }).then((response) => {
+        Axios.post('https://gracious-cray-74c49b.netlify.app/.netlify/functions/secret-area', { password: this.field.value }).then(response => {
             this.form.remove();
             this.contentArea.innerHTML = response.data;
         }).catch(() => {
-            this.contentArea.innerHTML = `
-            <p class="client-area__error>That secret phrase is not correct, try again.</p>
-            `;
+            this.contentArea.innerHTML = `<p class="client-area__error>That secret phrase is not correct, try again.</p>`;
             this.field.value = '';
             this.field.focus();
         });
