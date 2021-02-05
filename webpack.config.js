@@ -14,7 +14,7 @@ const postCSSPlugins = [
     require('autoprefixer')
 ];
 
-// copy images over to dist folder on compile
+// copy images over to dist(docs) folder on compile
 class RunAfterCompile {
     apply(compiler) {
         compiler.hooks.done.tap('Copy Images', function () {
