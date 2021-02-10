@@ -15,11 +15,11 @@
         @mixin-content;
     }
 }
-
+/* Not using floats anywhere, but a good example of applying non media query mixin*/
 @define-mixin clearfix {
     &::after {
         content: '';
         clear: both;
-        display: table;;
+        display: table;
     }
 }
